@@ -55,7 +55,9 @@ const entrepreneurs = [
   entrepreneurs.forEach(element => {
     sortarray.push(element.last + " " + element.first)
   });
-  console.log(namearrays.sort())
+  sortarray.sort().forEach(element => {
+    console.log(element)
+  });
 
   console.log("-----------------------------------------")
 }

@@ -9,7 +9,7 @@ const books = [
   { title: 'Le meilleur des mondes', id: 88847, rented: 58 },
   { title: 'La disparition', id: 364445, rented: 33 },
   { title: 'La lune seule le sait', id: 63541, rented: 43 },
-  { title: 'Voyage au centre de la Terre', id: 4656388, rented: 38 },
+  { title: 'Voyage au centre de la Terre', id: 4656388, rented: 1000 },
   { title: 'Guerre et Paix', id: 748147, rented: 19 }
 ];
 
@@ -31,4 +31,39 @@ const books = [
   console.log("-----------------------------------------")
 }
 
-console.log(books[0].rented)
+{
+ books.forEach(element => {
+   if (element.id == 873495)
+   {
+     console.log("le livre avec l'id 873495 est " + element.title)
+   }
+ });
+ console.log("-----------------------------------------")
+}
+
+{
+  console.log(books)
+  books.forEach(element => {
+    if (element.id == 133712)
+    {
+      books.splice(element,1)
+      console.log("le livre avec l'id 133712 est suprimé")
+    }
+  });
+  console.log(books)
+  console.log("-----------------------------------------")
+
+}
+
+{
+  var arrayname = []
+
+  books.forEach(element => {
+    arrayname.push(element.title)
+  });
+  arrayname.sort().forEach(element => {    
+    console.log(element)
+  });
+
+  console.log("-----------------------------------------")
+}
